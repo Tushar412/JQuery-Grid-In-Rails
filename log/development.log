@@ -1,0 +1,1471 @@
+# Logfile created on Wed Feb 23 15:01:05 +0530 2011  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (23.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (173.2ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (318.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090412142106)
+  [4;36;1mSQL (71.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `pseudo` varchar(255), `firstname` varchar(255), `lastname` varchar(255), `email` varchar(255), `role` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('ahe', '2011-02-23 09:31:08', '2011-02-23 09:31:08', 'admin', 'Heukmes', 'Anthony', 'ahe@ahe.be')[0m
+  [4;36;1mSQL (55.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('willd', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Dalmat', 'Wilfried', 'willd@ahe.be')[0m
+  [4;35;1mSQL (37.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('marcos', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'defender', 'Camozzato', 'Marcos', 'marcos@ahe.be')[0m
+  [4;36;1mSQL (38.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('onyewuo', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'defender', 'Onyewu', 'Ogushi', 'onyewuo@ahe.be')[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('sarrm', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'defender', 'Sarr', 'Momo', 'sarrm@ahe.be')[0m
+  [4;36;1mSQL (38.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('mulemol', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'defender', 'Mulemo', 'Landry', 'mulemol@ahe.be')[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('witsela', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Witsel', 'Axel', 'witsela@ahe.be')[0m
+  [4;36;1mSQL (38.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('defours', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Defour', 'Steven', 'defours@ahe.be')[0m
+  [4;35;1mSQL (38.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('goreuxr', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Goreux', 'Reginal', 'goureux@ahe.be')[0m
+  [4;36;1mSQL (38.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('jova', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'striker', 'Jovanovic', 'Milan', 'jova@ahe.be')[0m
+  [4;35;1mSQL (38.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('decamar', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'striker', 'De Camargo', 'Igor', 'decamar@ahe.be')[0m
+  [4;36;1mSQL (38.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('mbokani', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'striker', 'Mbokani', 'Dieumerci', 'mbokani@ahe.be')[0m
+  [4;35;1mSQL (38.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('nicaise', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Nicaise', 'Benjamin', 'nicaise@ahe.be')[0m
+  [4;36;1mSQL (38.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('bolats', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'goalkeeper', 'Bolat', 'Sinan', 'bolats@ahe.be')[0m
+  [4;35;1mSQL (38.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('leonb', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'striker', 'Benko', 'Leon', 'leonb@ahe.be')[0m
+  [4;36;1mSQL (38.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('espi', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'goalkeeper', 'Espinoza', 'Aragon', 'espi@ahe.be')[0m
+  [4;35;1mSQL (38.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('carce', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Carcela', 'Medhi', 'carce@ahe.be')[0m
+  [4;36;1mSQL (38.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('manga', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Mangala', 'Eliaquim', 'manga@ahe.be')[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('miku', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'defender', 'Mikulic', 'Tomislav', 'miku@ahe.be')[0m
+  [4;36;1mSQL (38.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('maestro', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'middlefielder', 'Conceicao', 'Segio', 'maestro@ahe.be')[0m
+  [4;35;1mSQL (38.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('bolo', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'trainer', 'Boloni', 'Laszlo', 'bolo@ahe.be')[0m
+  [4;36;1mSQL (38.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('pesto', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'trainer', 'Preto', 'Joaquim', 'ahe@ahe.be')[0m
+  [4;35;1mSQL (38.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('pf', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'admin', 'Francois', 'Pierre', 'pf@ahe.be')[0m
+  [4;36;1mSQL (38.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('moi', '2011-02-23 09:31:09', '2011-02-23 09:31:09', 'striker', 'Moi', 'Moi', 'moi@ahe.be')[0m
+  [4;35;1mSQL (38.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (16.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090412142106')[0m
+Migrating to CreatePets (20090412152333)
+  [4;35;1mSQL (104.7ms)[0m   [0mCREATE TABLE `pets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mPet Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Youpi', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 1)[0m
+  [4;35;1mSQL (33.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.2ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Blouk', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 1)[0m
+  [4;36;1mSQL (38.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.2ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Pif', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 1)[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.2ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Paf', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 2)[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Meuh', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 3)[0m
+  [4;35;1mSQL (38.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.2ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Boug', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 3)[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (21.7ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Zigg', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 4)[0m
+  [4;35;1mSQL (50.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Iop', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 4)[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Tcham', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 4)[0m
+  [4;35;1mSQL (37.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Outch', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 5)[0m
+  [4;36;1mSQL (37.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Tzii', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 5)[0m
+  [4;35;1mSQL (38.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Tutu', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 6)[0m
+  [4;36;1mSQL (38.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Tata', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 7)[0m
+  [4;35;1mSQL (38.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (1.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Bobo', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 7)[0m
+  [4;36;1mSQL (47.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Bulk', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 7)[0m
+  [4;35;1mSQL (56.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.5ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Rocky', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 7)[0m
+  [4;36;1mSQL (38.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Arnold', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 8)[0m
+  [4;35;1mSQL (37.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Miii', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 9)[0m
+  [4;36;1mSQL (40.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Tititi', '2011-02-23 09:31:10', '2011-02-23 09:31:10', 10)[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (4.4ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Bob', '2011-02-23 09:31:11', '2011-02-23 09:31:11', 11)[0m
+  [4;36;1mSQL (43.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.3ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Max', '2011-02-23 09:31:11', '2011-02-23 09:31:11', 12)[0m
+  [4;35;1mSQL (47.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.3ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Poop', '2011-02-23 09:31:11', '2011-02-23 09:31:11', 12)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPet Create (0.2ms)[0m   [0;1mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Bikk', '2011-02-23 09:31:11', '2011-02-23 09:31:11', 13)[0m
+  [4;35;1mSQL (47.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPet Create (0.2ms)[0m   [0mINSERT INTO `pets` (`name`, `created_at`, `updated_at`, `user_id`) VALUES('Allo', '2011-02-23 09:31:11', '2011-02-23 09:31:11', 13)[0m
+  [4;36;1mSQL (38.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (16.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090412152333')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `pets`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `pets`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:03:22) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (undefined method `jqgrid' for #<ActionView::Base:0xb76936a8>) on line #2 of app/views/users/index.html.erb:
+1: <h1>1) Simple DataGrid</h1>
+2: <%= jqgrid("Football Players", "players", "/users",
+3: 	[
+4: 		{ :field => "id", :label => "ID", :width => 35, :resizable => false },
+5: 		{ :field => "pseudo", :label => "Pseudo" },
+
+    app/views/users/index.html.erb:2
+    /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (13.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:04:48) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (undefined method `jqgrid' for #<ActionView::Base:0xb6f8d124>) on line #2 of app/views/users/index.html.erb:
+1: <h1>1) Simple DataGrid</h1>
+2: <%= jqgrid("Football Players", "players", "/users",
+3: 	[
+4: 		{ :field => "id", :label => "ID", :width => 35, :resizable => false },
+5: 		{ :field => "pseudo", :label => "Pseudo" },
+
+    app/views/users/index.html.erb:2
+    /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (29.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:09) [GET]
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 20[0m
+  [4;36;1mSQL (25.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 72ms (View: 32, DB: 27) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (17.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:10) [GET]
+  Parameters: {"nd"=>"1298453710255", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 19) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453710255&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (24.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:10) [GET]
+  Parameters: {"nd"=>"1298453710483", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 27) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453710483&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:10) [GET]
+  Parameters: {"nd"=>"1298453710634", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453710634&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (34.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:10) [GET]
+  Parameters: {"nd"=>"1298453710826", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 37) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453710826&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711009", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 18ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453711009&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711171", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/users/pets?q=1&_search=false&nd=1298453711171&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711339", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453711339&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711530", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453711530&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711744", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453711744&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:11) [GET]
+  Parameters: {"nd"=>"1298453711933", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453711933&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:12) [GET]
+  Parameters: {"nd"=>"1298453712128", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453712128&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:12) [GET]
+  Parameters: {"nd"=>"1298453712309", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (14.9ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 84ms (View: 1, DB: 17) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453712309&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:12) [GET]
+  Parameters: {"nd"=>"1298453712502", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453712502&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:05:12) [GET]
+  Parameters: {"nd"=>"1298453712686", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453712686&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:38) [GET]
+  Parameters: {"nd"=>"1298453738153", "sord"=>"", "id"=>"1", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mPet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.5ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 1) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 1) [0m
+Completed in 27ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=1&_search=false&nd=1298453738153&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:38) [GET]
+  Parameters: {"nd"=>"1298453738364", "sord"=>"", "id"=>"1", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mPet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 1) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 1) [0m
+Completed in 24ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=1&_search=false&nd=1298453738364&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:43) [GET]
+  Parameters: {"nd"=>"1298453743194", "sord"=>"", "id"=>"2", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mPet Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.6ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 2) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 2) [0m
+Completed in 20ms (View: 1, DB: 5) | 200 OK [http://localhost/users/pets?q=1&id=2&_search=false&nd=1298453743194&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:43) [GET]
+  Parameters: {"nd"=>"1298453743414", "sord"=>"", "id"=>"2", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mPet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 2) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 2) [0m
+Completed in 18ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=2&_search=false&nd=1298453743414&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:46) [GET]
+  Parameters: {"nd"=>"1298453746898", "sord"=>"", "id"=>"2", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mPet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.5ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 2) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 2) [0m
+Completed in 24ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=2&_search=false&nd=1298453746898&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:48) [GET]
+  Parameters: {"nd"=>"1298453748537", "sord"=>"", "id"=>"2", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mPet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 2) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 2) [0m
+Completed in 95ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=2&_search=false&nd=1298453748537&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:05:49) [GET]
+  Parameters: {"nd"=>"1298453749652", "sord"=>"", "id"=>"2", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (7.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mPet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.5ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 2) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 2) [0m
+Completed in 26ms (View: 1, DB: 10) | 200 OK [http://localhost/users/pets?q=1&id=2&_search=false&nd=1298453749652&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:02) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 20[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 26ms (View: 9, DB: 8) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:03) [GET]
+  Parameters: {"nd"=>"1298453763680", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 22ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453763680&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (19.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:03) [GET]
+  Parameters: {"nd"=>"1298453763879", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.8ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 21ms (View: 1, DB: 29) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453763879&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (19.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764035", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 17ms (View: 1, DB: 22) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453764035&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764233", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453764233&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764418", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453764418&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764575", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/users/pets?q=1&_search=false&nd=1298453764575&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764745", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453764745&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:04) [GET]
+  Parameters: {"nd"=>"1298453764935", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453764935&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:05) [GET]
+  Parameters: {"nd"=>"1298453765126", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453765126&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:05) [GET]
+  Parameters: {"nd"=>"1298453765321", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453765321&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:05) [GET]
+  Parameters: {"nd"=>"1298453765508", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 2, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453765508&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (22.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:05) [GET]
+  Parameters: {"nd"=>"1298453765685", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 102ms (View: 1, DB: 24) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453765685&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:05) [GET]
+  Parameters: {"nd"=>"1298453765864", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (6.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 20ms (View: 1, DB: 7) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453765864&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:06) [GET]
+  Parameters: {"nd"=>"1298453766041", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453766041&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:07) [GET]
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 20[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (30.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:08) [GET]
+  Parameters: {"nd"=>"1298453768372", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 17ms (View: 1, DB: 32) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453768372&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (7.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:08) [GET]
+  Parameters: {"nd"=>"1298453768583", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 18ms (View: 2, DB: 9) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453768583&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:08) [GET]
+  Parameters: {"nd"=>"1298453768743", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453768743&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:08) [GET]
+  Parameters: {"nd"=>"1298453768922", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453768922&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769104", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 14ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453769104&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769265", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/users/pets?q=1&_search=false&nd=1298453769265&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769397", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453769397&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769548", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 37ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453769548&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769709", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453769709&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:09) [GET]
+  Parameters: {"nd"=>"1298453769861", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453769861&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:10) [GET]
+  Parameters: {"nd"=>"1298453770012", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (16.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 102ms (View: 1, DB: 18) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453770012&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:10) [GET]
+  Parameters: {"nd"=>"1298453770164", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 22ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453770164&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:10) [GET]
+  Parameters: {"nd"=>"1298453770369", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 20ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453770369&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:10) [GET]
+  Parameters: {"nd"=>"1298453770519", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 22ms (View: 7, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453770519&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (2.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#post_data (for 127.0.0.1 at 2011-02-23 15:06:47) [POST]
+  Parameters: {"pseudo"=>"TRG", "role"=>"", "lastname"=>"Gandhi", "id"=>"_empty", "oper"=>"add", "firstname"=>"Tushar", "email"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`pseudo`, `created_at`, `updated_at`, `role`, `lastname`, `firstname`, `email`) VALUES('TRG', '2011-02-23 09:36:47', '2011-02-23 09:36:47', '', 'Gandhi', 'Tushar', '')[0m
+  [4;36;1mSQL (22.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 38ms (View: 1, DB: 27) | 200 OK [http://localhost/users/post_data]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:06:47) [GET]
+  Parameters: {"nd"=>"1298453807098", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453807098&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (10.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:09:26) [GET]
+  Parameters: {"nd"=>"1298453966887", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"25", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 25[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 19ms (View: 1, DB: 13) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298453966887&rows=25&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:11:25) [GET]
+  Parameters: {"nd"=>"1298454085154", "sord"=>"asc", "id"=>"1", "q"=>"2", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"id"}
+  [4;35;1mUser Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mPet Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.5ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 1) ORDER BY id asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 1) ORDER BY id asc [0m
+Completed in 26ms (View: 2, DB: 9) | 200 OK [http://localhost/users/pets?q=2&id=1&_search=false&nd=1298454085154&rows=10&page=1&sidx=id&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:08) [GET]
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 20[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 103ms (View: 93, DB: 2) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (11.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:09) [GET]
+  Parameters: {"nd"=>"1298454429697", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (6.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 22ms (View: 1, DB: 19) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454429697&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:09) [GET]
+  Parameters: {"nd"=>"1298454429764", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 22ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454429764&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (1.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:09) [GET]
+  Parameters: {"nd"=>"1298454429819", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 24ms (View: 1, DB: 4) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454429819&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:09) [GET]
+  Parameters: {"nd"=>"1298454429871", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 23ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454429871&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454429925", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 20ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454429925&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454429983", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+Completed in 129ms (View: 126, DB: 0) | 200 OK [http://localhost/users/pets?q=1&_search=false&nd=1298454429983&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (16.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430070", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 26ms (View: 2, DB: 28) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430070&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (37.8ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430163", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 23ms (View: 1, DB: 41) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430163&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430284", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 19ms (View: 1, DB: 4) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430284&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (27.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430373", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 18ms (View: 1, DB: 30) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430373&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (17.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430445", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 3, DB: 20) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430445&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (35.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430534", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 27ms (View: 1, DB: 38) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430534&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430652", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430652&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:10) [GET]
+  Parameters: {"nd"=>"1298454430767", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454430767&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:13) [GET]
+  Parameters: {"nd"=>"1298454432930", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 18ms (View: 1, DB: 5) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454432930&rows=10&page=1&sidx=role&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:13) [GET]
+  Parameters: {"nd"=>"1298454433790", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 21ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454433790&rows=10&page=1&sidx=role&sord=desc]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:14) [GET]
+  Parameters: {"nd"=>"1298454434654", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;36;1mUser Columns (6.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 22ms (View: 1, DB: 8) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454434654&rows=10&page=1&sidx=role&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:15) [GET]
+  Parameters: {"nd"=>"1298454435864", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"lastname"}
+  [4;35;1mUser Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` ORDER BY lastname asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY lastname asc [0m
+Completed in 17ms (View: 1, DB: 5) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454435864&rows=10&page=1&sidx=lastname&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:16) [GET]
+  Parameters: {"nd"=>"1298454436910", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454436910&rows=10&page=1&sidx=firstname&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:22) [GET]
+  Parameters: {"nd"=>"1298454442197", "sord"=>"asc", "q"=>"1", "page"=>"2", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM `users` ORDER BY firstname asc LIMIT 10, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 18ms (View: 1, DB: 4) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454442197&rows=10&page=2&sidx=firstname&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:23) [GET]
+  Parameters: {"nd"=>"1298454443261", "sord"=>"asc", "q"=>"1", "page"=>"3", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname asc LIMIT 20, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454443261&rows=10&page=3&sidx=firstname&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:44) [GET]
+  Parameters: {"nd"=>"1298454464536", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (8.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 23ms (View: 1, DB: 10) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454464536&rows=10&page=1&sidx=role&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:45) [GET]
+  Parameters: {"nd"=>"1298454465171", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 82ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454465171&rows=10&page=1&sidx=role&sord=desc]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:47) [GET]
+  Parameters: {"nd"=>"1298454467097", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (8.0ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 25ms (View: 1, DB: 10) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454467097&rows=10&page=1&sidx=role&sord=asc]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:48) [GET]
+  Parameters: {"nd"=>"1298454468774", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 19ms (View: 1, DB: 4) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454468774&rows=10&page=1&sidx=role&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:17:50) [GET]
+  Parameters: {"nd"=>"1298454470829", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 16ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454470829&rows=10&page=1&sidx=role&sord=asc]
+  [4;36;1mSQL (7.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:18:39) [GET]
+  Parameters: {"nd"=>"1298454518981", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY pseudo asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo asc [0m
+Completed in 17ms (View: 1, DB: 10) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454518981&rows=10&page=1&sidx=pseudo&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#post_data (for 127.0.0.1 at 2011-02-23 15:18:54) [POST]
+  Parameters: {"oper"=>"del", "id"=>"10"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM `users` WHERE `id` = 10[0m
+  [4;35;1mSQL (34.5ms)[0m   [0mCOMMIT[0m
+Completed in 49ms (View: 2, DB: 37) | 200 OK [http://localhost/users/post_data]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:18:54) [GET]
+  Parameters: {"nd"=>"1298454534853", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` ORDER BY pseudo asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo asc [0m
+Completed in 25ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454534853&rows=10&page=1&sidx=pseudo&sord=asc]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#post_data (for 127.0.0.1 at 2011-02-23 15:18:57) [POST]
+  Parameters: {"oper"=>"del", "id"=>"10"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=10):
+  app/controllers/users_controller.rb:32:in `post_data'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (25.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#post_data (for 127.0.0.1 at 2011-02-23 15:19:02) [POST]
+  Parameters: {"oper"=>"del", "id"=>"10"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=10):
+  app/controllers/users_controller.rb:32:in `post_data'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (95.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#post_data (for 127.0.0.1 at 2011-02-23 15:19:03) [POST]
+  Parameters: {"oper"=>"del", "id"=>"10"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=10):
+  app/controllers/users_controller.rb:32:in `post_data'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/ruby2/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (2.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:19:29) [GET]
+  Parameters: {"nd"=>"1298454569260", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 18ms (View: 1, DB: 5) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454569260&rows=10&page=1&sidx=role&sord=desc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:19:42) [GET]
+  Parameters: {"nd"=>"1298454582412", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;36;1mUser Columns (5.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` ORDER BY pseudo asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo asc [0m
+Completed in 19ms (View: 1, DB: 7) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454582412&rows=10&page=1&sidx=pseudo&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:19:54) [GET]
+  Parameters: {"nd"=>"1298454594361", "sord"=>"", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` LIMIT 0, 10[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `users` [0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454594361&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:20:02) [GET]
+  Parameters: {"nd"=>"1298454602487", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"email"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` ORDER BY email asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY email asc [0m
+Completed in 19ms (View: 1, DB: 6) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454602487&rows=10&page=1&sidx=email&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:20:03) [GET]
+  Parameters: {"nd"=>"1298454603159", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"email"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY email desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY email desc [0m
+Completed in 21ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454603159&rows=10&page=1&sidx=email&sord=desc]
+  [4;36;1mSQL (4.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:20:05) [GET]
+  Parameters: {"nd"=>"1298454605680", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname asc LIMIT 0, 10[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 16ms (View: 1, DB: 8) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454605680&rows=10&page=1&sidx=firstname&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:20:06) [GET]
+  Parameters: {"nd"=>"1298454606297", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY firstname desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY firstname desc [0m
+Completed in 108ms (View: 85, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298454606297&rows=10&page=1&sidx=firstname&sord=desc]
+  [4;36;1mSQL (5.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:16) [GET]
+  Parameters: {"nd"=>"1298456476718", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"email"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY email asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY email asc [0m
+Completed in 19ms (View: 1, DB: 8) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456476718&rows=10&page=1&sidx=email&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:18) [GET]
+  Parameters: {"nd"=>"1298456478577", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"email"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY email desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY email desc [0m
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456478577&rows=10&page=1&sidx=email&sord=desc]
+  [4;36;1mSQL (10.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:20) [GET]
+  Parameters: {"nd"=>"1298456480125", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY role asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role asc [0m
+Completed in 20ms (View: 1, DB: 13) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456480125&rows=10&page=1&sidx=role&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:21) [GET]
+  Parameters: {"nd"=>"1298456481173", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 10[0m
+  [4;35;1mSQL (6.9ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 21ms (View: 1, DB: 10) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456481173&rows=10&page=1&sidx=role&sord=desc]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:25) [GET]
+  Parameters: {"nd"=>"1298456485467", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"25", "sidx"=>"role"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 25[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 20ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456485467&rows=25&page=1&sidx=role&sord=desc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:30) [GET]
+  Parameters: {"nd"=>"1298456490223", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"100", "sidx"=>"role"}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY role desc LIMIT 0, 100[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY role desc [0m
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456490223&rows=100&page=1&sidx=role&sord=desc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:51:34) [GET]
+  Parameters: {"nd"=>"1298456494756", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"100", "sidx"=>"email"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` ORDER BY email asc LIMIT 0, 100[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY email asc [0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456494756&rows=100&page=1&sidx=email&sord=asc]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:51:38) [GET]
+  Parameters: {"nd"=>"1298456498661", "sord"=>"", "id"=>"11", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mPet Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (6.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 11) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 11) [0m
+Completed in 25ms (View: 1, DB: 10) | 200 OK [http://localhost/users/pets?q=1&id=11&_search=false&nd=1298456498661&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:52:26) [GET]
+  Parameters: {"nd"=>"1298456546337", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"100", "sidx"=>"email"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY email asc LIMIT 0, 100[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY email asc [0m
+Completed in 89ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456546337&rows=100&page=1&sidx=email&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:53:07) [GET]
+  Parameters: {"nd"=>"1298456587195", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"email"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY email asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY email asc [0m
+Completed in 18ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456587195&rows=10&page=1&sidx=email&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:53:11) [GET]
+  Parameters: {"nd"=>"1298456591343", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY pseudo asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo asc [0m
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456591343&rows=10&page=1&sidx=pseudo&sord=asc]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:53:12) [GET]
+  Parameters: {"nd"=>"1298456592485", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY pseudo desc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo desc [0m
+Completed in 16ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456592485&rows=10&page=1&sidx=pseudo&sord=desc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 15:53:14) [GET]
+  Parameters: {"nd"=>"1298456594573", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"pseudo"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` ORDER BY pseudo asc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY pseudo asc [0m
+Completed in 13ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298456594573&rows=10&page=1&sidx=pseudo&sord=asc]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:23) [GET]
+  Parameters: {"nd"=>"1298456603299", "sord"=>"", "id"=>"11", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;35;1mPet Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 11) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 11) [0m
+Completed in 19ms (View: 2, DB: 4) | 200 OK [http://localhost/users/pets?q=1&id=11&_search=false&nd=1298456603299&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:30) [GET]
+  Parameters: {"nd"=>"1298456609998", "sord"=>"", "id"=>"14", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mPet Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.7ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 14) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 14) [0m
+Completed in 27ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=14&_search=false&nd=1298456609998&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (1.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:31) [GET]
+  Parameters: {"nd"=>"1298456611213", "sord"=>"", "id"=>"14", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mPet Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.3ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 14) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 14) [0m
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/users/pets?q=1&id=14&_search=false&nd=1298456611213&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:31) [GET]
+  Parameters: {"nd"=>"1298456611466", "sord"=>"", "id"=>"14", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (6.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mPet Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.6ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 14) LIMIT 0, 10[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 14) [0m
+Completed in 106ms (View: 1, DB: 9) | 200 OK [http://localhost/users/pets?q=1&id=14&_search=false&nd=1298456611466&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:32) [GET]
+  Parameters: {"nd"=>"1298456612435", "sord"=>"", "id"=>"14", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mPet Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `pets`[0m
+  [4;36;1mPet Load (0.5ms)[0m   [0;1mSELECT * FROM `pets` WHERE (`pets`.user_id = 14) LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 14) [0m
+Completed in 21ms (View: 1, DB: 3) | 200 OK [http://localhost/users/pets?q=1&id=14&_search=false&nd=1298456612435&rows=10&page=1&sidx=&sord=]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#pets (for 127.0.0.1 at 2011-02-23 15:53:33) [GET]
+  Parameters: {"nd"=>"1298456613094", "sord"=>"", "id"=>"14", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>""}
+  [4;36;1mUser Columns (8.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mPet Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `pets`[0m
+  [4;35;1mPet Load (0.4ms)[0m   [0mSELECT * FROM `pets` WHERE (`pets`.user_id = 14) LIMIT 0, 10[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pets` WHERE (`pets`.user_id = 14) [0m
+Completed in 27ms (View: 1, DB: 12) | 200 OK [http://localhost/users/pets?q=1&id=14&_search=false&nd=1298456613094&rows=10&page=1&sidx=&sord=]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 17:18:03) [GET]
+  Parameters: {"nd"=>"1298461683351", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;35;1mUser Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` ORDER BY firstname asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 17ms (View: 1, DB: 5) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298461683351&rows=10&page=1&sidx=firstname&sord=asc]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 17:18:04) [GET]
+  Parameters: {"nd"=>"1298461684042", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname desc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname desc [0m
+Completed in 18ms (View: 1, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298461684042&rows=10&page=1&sidx=firstname&sord=desc]
+  [4;35;1mSQL (7.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 17:18:04) [GET]
+  Parameters: {"nd"=>"1298461684511", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` ORDER BY firstname asc LIMIT 0, 10[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 16ms (View: 1, DB: 10) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298461684511&rows=10&page=1&sidx=firstname&sord=asc]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 17:18:04) [GET]
+  Parameters: {"nd"=>"1298461684914", "sord"=>"desc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname desc LIMIT 0, 10[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname desc [0m
+Completed in 16ms (View: 1, DB: 2) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298461684914&rows=10&page=1&sidx=firstname&sord=desc]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-23 17:20:02) [GET]
+  Parameters: {"nd"=>"1298461802262", "sord"=>"asc", "q"=>"1", "page"=>"1", "_search"=>"false", "rows"=>"10", "sidx"=>"firstname"}
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` ORDER BY firstname asc LIMIT 0, 10[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `users` ORDER BY firstname asc [0m
+Completed in 19ms (View: 4, DB: 3) | 200 OK [http://localhost/users?q=1&_search=false&nd=1298461802262&rows=10&page=1&sidx=firstname&sord=asc]
